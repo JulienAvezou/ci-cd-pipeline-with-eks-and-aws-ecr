@@ -61,10 +61,10 @@ pipeline {
         stage('commit version update') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'github-credentials', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+                    withCredentials([string(credentialsId: 'github-credentials', variable: 'TOKEN')]) {
                         sh 'git config user.email "jenkins@example.com"'
                         sh 'git config user.name "Jenkins"'
-                        sh "git remote set-url origin https://${USER}:${PASS}@github.com/JulienAvezou/ci-cd-pipeline-with-eks-and-aws-ecr.git"
+                        sh "git remote set-url origin https://${TOKEN}@github.com/JulienAvezou/ci-cd-pipeline-with-eks-and-aws-ecr.git"
                         sh 'git add .'
                         sh 'git commit -m "ci: version bump"'
                         sh 'git push origin HEAD:main'
