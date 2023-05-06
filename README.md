@@ -10,5 +10,6 @@
 
 5. Add stage in Jenkinsfile to copy the files + ssh-key to ansible server
 
+6. Add stage in Jenkinsfile that calls ansible playbook to configure ec2 instances
 
 
