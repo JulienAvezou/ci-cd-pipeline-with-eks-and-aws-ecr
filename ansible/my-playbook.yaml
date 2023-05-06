@@ -13,7 +13,7 @@
           - docker
         update_cache: yes
         state: present
-        use_backend: yum4
+        use_backend: yum
     - name: Install docker-compose
       get_url:
         url: https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)
