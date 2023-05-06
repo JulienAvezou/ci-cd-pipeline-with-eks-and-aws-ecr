@@ -5,4 +5,5 @@ Project: Complete CI/CD Pipeline with Terraform
 2. Install TF inside Jenkins container
 3. Configure TF inside project to provision server
 4. Adjust Jenkinsfile
-5. Run the pipeline and verify all stages worked
+5. Run the pipeline and verify all stages were successful
+6. Clean up infrastructure
